@@ -1,3 +1,8 @@
+import VideosNah from "../assets/videosdonah.png";
+import TotemMidiaIndoor from "../assets/totem-midia-indoor.png";
+import PastelDoCabelo from "../assets/patel-do-cabelo.png";
+import BeatrizSennosAdvogada from "../assets/beatriz-sennos-advogada.png";
+
 export function Projects() {
   return (
     <section id="projetos" className="py-16 bg-white">
@@ -19,7 +24,7 @@ export function Projects() {
           <div className="project-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition">
             <div className="relative h-48 overflow-hidden">
               <img
-                src="./assets/videosdonah.png"
+                src={VideosNah}
                 alt="Plataforma de E-commerce"
                 className="w-full h-full object-cover"
               />
@@ -31,7 +36,7 @@ export function Projects() {
               </div>
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Website</h3>
+              <h3 className="text-xl font-bold mb-2">Videos do Nah</h3>
               <p className="text-gray-600 mb-4">
                 Website desenvolvido sob medida para uma empresa de marketing
                 digital emergente em Ubatuba, otimizado para fortalecer sua
@@ -54,7 +59,7 @@ export function Projects() {
           <div className="project-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition">
             <div className="relative h-48 overflow-hidden">
               <img
-                src="./assets/totem-midia-indoor.png"
+                src={TotemMidiaIndoor}
                 alt="Infraestrutura como Código"
                 className="w-full h-full object-cover"
               />
@@ -84,6 +89,76 @@ export function Projects() {
                 </span>
                 <span className="text-xs bg-gray-100 px-2 py-1 rounded">
                   Node.js
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition">
+            <div className="relative h-48 overflow-hidden">
+              <img
+                src={PastelDoCabelo}
+                alt="Plataforma de E-commerce"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-4">
+                <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
+                  Frontend
+                </span>
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Pastel do Cabelo</h3>
+              <p className="text-gray-600 mb-4">
+                Website delicioso, desenvolvido sob medida para uma pastelaria
+                em Ubatuba, otimizado para fortalecer sua marca, exibir seu
+                cardápio irresistível e atrair mais clientes na região.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                  Node.js
+                </span>
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                  React.js
+                </span>
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                  HostGator
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition">
+            <div className="relative h-48 overflow-hidden">
+              <img
+                src={BeatrizSennosAdvogada}
+                alt="Plataforma de E-commerce"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-4">
+                <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
+                  Frontend
+                </span>
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Pastel do Cabelo</h3>
+              <p className="text-gray-600 mb-4">
+                Website sob medida para uma advocacia em Caraguatatuba, focado
+                em destacar seus serviços, transmitir confiança e atrair novos
+                clientes que buscam excelência jurídica na região.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                  Node.js
+                </span>
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                  React.js
+                </span>
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                  HostGator
                 </span>
               </div>
             </div>

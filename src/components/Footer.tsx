@@ -64,25 +64,19 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-4">Redes Sociais</h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/matheus-fortunato-14513b195"
                 className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-xl transition"
               >
                 <i className="fab fa-linkedin-in"></i>
               </a>
               <a
-                href="#"
+                href="https://github.com/mfortunat0"
                 className="bg-gray-700 hover:bg-gray-900 text-white p-3 rounded-xl transition"
               >
                 <i className="fab fa-github"></i>
               </a>
               <a
-                href="#"
-                className="bg-blue-400 hover:bg-blue-500 text-white p-3 rounded-xl transition"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
+                href="https://www.youtube.com/@fortunatogt10"
                 className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-xl transition"
               >
                 <i className="fab fa-youtube"></i>

@@ -28,12 +28,12 @@ export function Header() {
           >
             Projetos
           </a>
-          <a
+          {/* <a
             href="#experiencia"
             className="px-3 py-2 text-gray-700 font-medium hover:text-blue-500 transition"
           >
             Experiência
-          </a>
+          </a> */}
           <a
             href="#contato"
             className="px-3 py-2 text-gray-700 font-medium hover:text-blue-500 transition"

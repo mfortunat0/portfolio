@@ -1,4 +1,47 @@
+import { useState, type ChangeEvent, type FormEvent } from "react";
+
 export function Contact() {
+  const [nameContact, setNameContact] = useState("");
+  const [emailContact, setEmailContact] = useState("");
+  const [phoneContact, setPhoneContact] = useState("");
+  const [subjectContact, setSubjectContact] = useState("Projeto Freelance");
+  const [messageContact, setMessageContact] = useState("");
+
+  const onChangeNameContact = (event: ChangeEvent<HTMLInputElement>) => {
+    setNameContact(event.target.value);
+  };
+
+  const onChangeEmailContact = (event: ChangeEvent<HTMLInputElement>) => {
+    setEmailContact(event.target.value);
+  };
+
+  const onChangePhoneContact = (event: ChangeEvent<HTMLInputElement>) => {
+    setPhoneContact(event.target.value);
+  };
+
+  const onChangeSubjectContact = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSubjectContact(event.target.value);
+  };
+
+  const onChangeMessageContact = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    setMessageContact(event.target.value);
+  };
+
+  const onSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    const message = `> Nome Completo: *${nameContact}* %0A
+${emailContact ? `> Email: *${emailContact}* %0A` : ""}
+> Telefone: *${phoneContact}* %0A
+> Assunto: *${subjectContact}* %0A 
+${nameContact} `;
+
+    window.open(`https://wa.me//5512981652491?text=${message}`);
+    setNameContact("");
+    setEmailContact("");
+    setPhoneContact("");
+    setMessageContact("");
+  };
+
   return (
     <section id="contato" className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -61,25 +104,19 @@ export function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/matheus-fortunato-14513b195"
                   className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition"
                 >
                   <i className="fab fa-linkedin-in"></i>
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/mfortunat0"
                   className="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full transition"
                 >
                   <i className="fab fa-github"></i>
                 </a>
                 <a
-                  href="#"
-                  className="bg-blue-400 hover:bg-blue-500 text-white p-3 rounded-full transition"
-                >
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  href="#"
+                  href="https://www.youtube.com/@fortunatogt10"
                   className="bg-red-500 hover:bg-red-600 text-white p-3 rounded-full transition"
                 >
                   <i className="fab fa-youtube"></i>
@@ -93,7 +130,7 @@ export function Contact() {
               <h3 className="text-2xl font-bold text-gray-800 mb-6">
                 Envie uma Mensagem
               </h3>
-              <form>
+              <form onSubmit={onSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label
@@ -105,6 +142,9 @@ export function Contact() {
                     <input
                       type="text"
                       id="name"
+                      required
+                      value={nameContact}
+                      onChange={onChangeNameContact}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
@@ -119,6 +159,8 @@ export function Contact() {
                     <input
                       type="email"
                       id="email"
+                      value={emailContact}
+                      onChange={onChangeEmailContact}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
@@ -133,6 +175,9 @@ export function Contact() {
                     <input
                       type="tel"
                       id="phone"
+                      required
+                      value={phoneContact}
+                      onChange={onChangePhoneContact}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
@@ -146,9 +191,11 @@ export function Contact() {
                     </label>
                     <select
                       id="subject"
+                      value={subjectContact}
+                      onChange={onChangeSubjectContact}
+                      required
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
-                      <option value="">Selecione...</option>
                       <option value="freelance">Projeto Freelance</option>
                       <option value="job">Oportunidade de Emprego</option>
                       <option value="consulting">Consultoria</option>
@@ -166,6 +213,9 @@ export function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    required
+                    value={messageContact}
+                    onChange={onChangeMessageContact}
                     className="w-full h-32 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
