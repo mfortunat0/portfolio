@@ -3,6 +3,7 @@ import TotemMidiaIndoor from "../assets/totem-midia-indoor.png";
 import PastelDoCabelo from "../assets/patel-do-cabelo.png";
 import BeatrizSennosAdvogada from "../assets/beatriz-sennos-advogada.png";
 import PCClean from "../assets/pc-clean.png";
+import FabbioRocha from "../assets/fabbio-rocha.png";
 
 export function Projects() {
   return (
@@ -188,6 +189,42 @@ export function Projects() {
                 o objetivo de destacar seus principais serviços, reforçar a
                 credibilidade da marca e conquistar clientes que buscam soluções
                 tecnológicas confiáveis e de alta qualidade.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                  Node.js
+                </span>
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                  React.js
+                </span>
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                  HostGator
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition">
+            <div className="relative h-48 overflow-hidden">
+              <img
+                src={FabbioRocha}
+                alt="Plataforma de E-commerce"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-4">
+                <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
+                  Frontend
+                </span>
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Fabbio Rocha</h3>
+              <p className="text-gray-600 mb-4">
+                Website estilo portfólio desenvolvido sob medida para um
+                ilustrador em Ubatuba, com foco em apresentar suas obras de
+                forma impactante, facilitar o contato com clientes e impulsionar
+                contratações por meio de uma vitrine visual envolvente.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="text-xs bg-gray-100 px-2 py-1 rounded">
